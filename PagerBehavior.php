@@ -1,6 +1,6 @@
 <?php
 
-namespace integready\pagerextends;
+namespace integready\linkpagerextender;
 
 use Yii;
 use yii\base\Behavior;

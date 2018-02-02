@@ -1,6 +1,6 @@
 <?php
 
-namespace integready\pagerextends;
+namespace integready\linkpagerextender;
 
 use yii\helpers\Html;
 use yii\widgets\LinkPager as YiiLinkPager;

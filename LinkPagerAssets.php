@@ -1,6 +1,6 @@
 <?php
 
-namespace integready\pagerextends;
+namespace integready\linkpagerextender;
 
 use yii\web\AssetBundle;
 
@@ -12,7 +12,7 @@ class LinkPagerAssets extends AssetBundle
     /**
      * @var string
      */
-    public $sourcePath = '@integready/pagerextends/assets';
+    public $sourcePath = '@integready/linkpagerextender/assets';
 
     /**
      * @var array
