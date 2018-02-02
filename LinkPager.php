@@ -35,6 +35,16 @@ class LinkPager extends YiiLinkPager
         ],
     ];
 
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+        $this->registerAssets();
+    }
+
     /**
      * @inheritdoc
      */
@@ -73,5 +83,14 @@ class LinkPager extends YiiLinkPager
             $pageSizeList[$value] = $value;
         }
         return Html::dropDownList($this->pagination->pageSizeParam, $this->pagination->getPageSize(), $pageSizeList, $this->pageSizeOptions);
+    }
+
+    /**
+     * Registers the needed assets
+     */
+    public function registerAssets()
+    {
+        $view = $this->getView();
+        LinkPagerAssets::register($view);
     }
 }
