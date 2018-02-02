@@ -1,4 +1,4 @@
-Pager extends
+Link pager extender
 ============================
 
 Installation
@@ -9,25 +9,21 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist integready/yii2-pagerextends "@dev"
+composer require --prefer-dist integready/yii2-linkpagerextender "~1.0"
 ```
 
 or add
 
 ```
-"integready/yii2-pagerextends": "@dev"
+"integready/yii2-linkpagerextender": "~1.0"
 ```
 
 to the require section of your `composer.json` file.
 
-Inserting a widget in GridView:
---
-
-### Included variables (`#INCLUDED`):
-###### # These are NOT variables, you do not need to write them into the code, replace them with the correct strings or your variables! They are for what would be clear where you need to write the same para- meters.
-* `$idGrid // string`
-
 ### Example:
+
+###### GridView id must be set.
+
 * index.php `(View)`:
 ```php
 <?php
@@ -36,16 +32,16 @@ use yii\grid\GridView;
 
 ?>
 <?= GridView::widget([
-    'id'            => $idGrid, #INCLUDED
+    'id'            => 'books-grid',
     'dataProvider'  => $dataProvider,
     'filterModel'   => $searchModel,
-    'as pager' => 'integready\pagerextends\PagerBehavior',
-    'pager' => [
-        'class' => 'integready\pagerextends\LinkPager',
+    'as pager'  => 'integready\linkpagerextender\PagerBehavior',
+    'pager'     => [
+        'class' => 'integready\linkpagerextender\LinkPager',
         'template'      => '{pageButtons} {pageSize}',
         'pageSizeList'  => [10, 50, 1000, 5000],
     ],
-    'columns'       => [
+    'columns'   => [
         // Columns list
     ],
 ]); ?>

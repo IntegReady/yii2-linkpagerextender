@@ -1,6 +1,6 @@
 {
-    "name": "integready/yii2-pagerextends",
-    "description": "Pager extends",
+    "name": "integready/yii2-linkpagerextender",
+    "description": "Link pager extender",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"],
     "license": "BSD-3-Clause",
